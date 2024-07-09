@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style></style>
+    <link rel="stylesheet" href="style.css" />
+    <title>Quiz App</title>
+  </head>
+  <body
+    style="
+      background-repeat: no-repeat;
+      background-size: cover;
+    "
+  class="opening">
+    <audio autoplay loop src="assets/backsound.mp3" id="audio"></audio>
+    <div class="container">
+      <div class="start-screen">
+        <h1 class="heading">AYO BERMAIN !</h1>
+        <div style="display: flex; justify-content: center">
+          <button
+            id="playButton"
+            style="padding: 10px; border-radius: 10px; background-color: pink"
+          >
+            Putar Musik
+          </button>
+        </div>
+
+
+        <button class="btn start">Start Quiz</button>
+      </div>
+      <div class="quiz hide">
+        <div class="question-wrapper">
+          <div class="number">
+            Question <span class="current">1</span>
+            <span class="total">/10</span>
+          </div>
+          <div class="hide" id="correct-question" style="display: flex; align-items: center; flex-direction: column;">
+            <p class="question-correction question-text" style="color: #fc3939">
+            <p class="question-correction1 question-text">
+            <p class="answer-text question-text"></p>
+          </div>
+          <div
+            style="display: flex; justify-content: center; margin-bottom: 50px"
+          >
+            <video
+              width="100%"
+              height="100%"
+              autoplay
+              controls
+              unmuted
+              class="videoQuestion" id="myVideo"
+            >
+          </video>
+            <video
+              width="100%"
+              height="100%"
+              autoplay
+              controls
+              unmuted
+              class="videoQuestion1 hide" id="myVideo1"
+            >
+          </video>
+          </div>
+
+          
+        </div>
+
+        <div class="hide" id="content-question">
+        <div class="question-wrapper">
+          <div class="question">This is a question This is a question?</div>
+          </p>
+        </div>
+
+        <div class="answer-wrapper">
+          <div class="answer selected">
+            <span class="text">answer</span>
+            <span class="checkbox">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+        </div>
+        
+        <button class="btn submit" disabled>Submit</button>
+        <button class="btn next">Next</button>
+      </div>
+        
+      </div>
+      <div class="end-screen hide">
+        <h1 class="heading">Quiz App</h1>
+        <div class="score">
+          <span class="score-text">Your score:</span>
+          <div>
+            <span class="final-score">0</span>
+            <span class="total-score">/10</span>
+          </div>
+        </div>
+        <button class="btn restart">Restart Quiz</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<script>
+  var video = document.getElementById("myVideo");
+
+  audio.volume = 0.2;
+  const playButton = document.getElementById("playButton");
+
+  playButton.addEventListener("click", () => {
+    document.getElementById("audio").play();
+  });
+</script>
